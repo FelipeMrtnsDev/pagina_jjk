@@ -1,0 +1,25 @@
+@use 'variaveis';
+
+.sinopse {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px;
+    margin-top: 10px;
+    gap: 24px;
+
+    &__img {
+        width: 80%;
+    }
+
+    &__descricao {
+        color: variaveis.$corDeTextoPrincipal;
+
+        & span {
+            background: linear-gradient(to bottom, white, rgb(153, 58, 153), rgb(30, 2, 30));
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}
