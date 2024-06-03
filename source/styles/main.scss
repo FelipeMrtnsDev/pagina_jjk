@@ -1,6 +1,8 @@
 @use 'variaveis';
 @use 'home';
 @use 'sinopse';
+@use 'personagens';
+@use 'melhoresMomentos';
 
 body {
     background-color: variaveis.$corDoBackgroundBody;
@@ -17,7 +19,7 @@ body {
 
 header {
     background-color: variaveis.$corDoHeader;
-    box-shadow: 0px 7px 10px rgb(41, 3, 50);
+    box-shadow: 0px 0.1px 20px purple;
     position: sticky;
     top: 0;
 }
@@ -41,6 +43,27 @@ header {
     
         li {
             margin-right: 24px;
+
+            @media screen and (max-width: 768px) {
+                margin-right: 8px;
+                font-size: 0.9em;
+            }
+
+            @media screen and (max-width: 545px) {
+                margin-right: 8px;
+                font-size: 0.7em;
+            }
+
+            @media screen and (max-width: 450px) {
+                margin-right: 8px;
+                font-size: 0.6em;
+            }
+
+            @media screen and (max-width: 378px) {
+                margin-right: 8px;
+                font-size: 0.7em;
+                margin-left: 8px;
+            }
     
             a {
                 text-decoration: none;

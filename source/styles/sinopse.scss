@@ -1,25 +1,64 @@
 @use 'variaveis';
+@use 'mixins';
 
-.sinopse {
+
+.container-sinopse {
     max-width: 1024px;
     margin: 0 auto;
-    display: grid;
+    display: flex;
+    
+    &__div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &__titulo {
+        color: variaveis.$corDeTextoPrincipal;
+        font-size: 1em;
+        
+
+            & span {
+                @include mixins.corLinear;
+            }
+        }
+    }
+
+    &__titulo {
+        color: variaveis.$corDeTextoPrincipal;
+        font-size: 1em;
+
+        & span {
+            @include mixins.corLinear;
+        }
+    }
+    
+    &__div {
+        display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 80px;
     margin-top: 10px;
     gap: 24px;
 
-    &__img {
-        width: 80%;
-    }
+    @media screen and (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr;
+}
 
-    &__descricao {
-        color: variaveis.$corDeTextoPrincipal;
-
-        & span {
-            background: linear-gradient(to bottom, white, rgb(153, 58, 153), rgb(30, 2, 30));
-            background-clip: text;
-            color: transparent;
+        &__texto {
+            @include mixins.corLinear;
         }
+
+        &__img {
+            width: 70%;
+        }
+
+        &__descricao {
+            color: variaveis.$corDeTextoPrincipal;
+
+            & span {
+                @include mixins.corLinear;
+            }
+        }
+
     }
 }
