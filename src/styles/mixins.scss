@@ -1,0 +1,27 @@
+@use 'variaveis';
+
+@mixin corLinear {
+    background: linear-gradient(to bottom, white, rgb(153, 58, 153), rgb(30, 2, 30));
+    background-clip: text;
+    color: transparent;
+}
+
+@mixin card {
+    background-color: variaveis.$corDoHeader;
+    background-size: cover;
+    overflow: hidden;
+    background-size: cover;
+    max-height: 40vh;
+    border-radius: 20px;
+
+    @media screen and (max-width: 545px) {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@mixin cardHover {
+    background-color: variaveis.$corCardHover;
+    transition: 0.5s;
+    cursor: pointer;
+}

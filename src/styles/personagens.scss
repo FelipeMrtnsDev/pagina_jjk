@@ -1,0 +1,119 @@
+@use 'variaveis';
+@use 'mixins';
+
+.texto {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &__personagens {
+        color: variaveis.$corDeTextoPrincipal;
+        font-size: 1em;
+        margin-bottom: 24px;
+
+        & span {
+            @include mixins.corLinear;
+            font-size: 2em;
+        }
+    }
+}
+
+.personagens {
+    max-width: 1024px;
+    margin: 0 auto;
+    min-height: 100vh;
+
+    &__div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+
+        @media screen and (max-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+        }
+
+        @media screen and (max-width: 545px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin: 0 auto;
+        }
+
+        &__card1 {
+            @include mixins.card;
+
+            &:hover {
+                @include mixins.cardHover;
+            }
+
+            &:not(:hover) {
+                transition: 0.5s;
+            }
+        }
+    
+        &__card2 {
+            @include mixins.card;
+
+            &:hover {
+                @include mixins.cardHover;
+            }
+
+            &:not(:hover) {
+                transition: 0.5s;
+            }
+        }
+    
+        &__card3 {
+            @include mixins.card;
+
+            &:hover {
+                @include mixins.cardHover;
+            }
+
+            &:not(:hover) {
+                transition: 0.5s;
+            }
+        }
+
+        &__card4 {
+            @include mixins.card;
+
+            &:hover {
+                @include mixins.cardHover;
+            }
+
+            &:not(:hover) {
+                transition: 0.5s;
+            }
+        }
+    
+        &__card5 {
+            @include mixins.card;
+
+            &:hover {
+                @include mixins.cardHover;
+            }
+
+            &:not(:hover) {
+                transition: 0.5s;
+            }
+        }
+    
+        &__card6 {
+            @include mixins.card;
+
+            &:hover {
+                @include mixins.cardHover;
+            }
+
+            &:not(:hover) {
+                transition: 0.5s;
+            }
+        }
+    }
+}
